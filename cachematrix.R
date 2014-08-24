@@ -3,6 +3,8 @@
 
 ## Write a short comment describing this function
 
+## This function creates an object list that gets and sets the value of a matrix, 
+## then gets and sets the value of it's inverse.
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -23,11 +25,14 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 
+## This function takes the return value of makeCacheMatrix as an argument and 
+## returns the inverse of the matrix if already cached, else the inverse is computed and returned.
+
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   m <- x$getInv()
    if(!is.null(m)) {
-     message("getting cached data")
+     message("get cached data")
      return(m)
      }
    data <- x$get()
